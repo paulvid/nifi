@@ -22,7 +22,7 @@ public class BoilerpipeArticleExtractorTest extends AbstractHTMLTest {
     public void testProcessor() {
         testRunner.setValidateExpressionUsage(false);
         testRunner.setProperty(BoilerpipeArticleExtractor.URL_PROPERTY,"https://www.nytimes.com/reuters/2018/08/17/business/17reuters-usa-tunnels-china.html");
-        testRunner.enqueue("Mock FlowFile");
+        testRunner.enqueue("Mock FlowFile Input");
         testRunner.run();
 
 
