@@ -49,12 +49,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Tags({"example"})
-@CapabilityDescription("Provide a description")
-@SeeAlso({})
-@ReadsAttributes({@ReadsAttribute(attribute="", description="")})
-@WritesAttributes({@WritesAttribute(attribute="", description="")})
-public class BoilerpipeArticleExtractor extends AbstractProcessor {
+@Tags({"boilerpipe", "html", "text", "article"})
+@CapabilityDescription("Nifi processor using BoilerPipe library to extract text of article page")
+@ReadsAttributes({@ReadsAttribute(attribute="URL", description="URL of the Article to Extract")})
+public class BoilerpipeArticleExtractor extends AbstractHTMLProcessor {
 
     public static final PropertyDescriptor URL_PROPERTY = new PropertyDescriptor
             .Builder().name("URL")
